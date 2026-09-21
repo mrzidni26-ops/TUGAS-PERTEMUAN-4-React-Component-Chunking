@@ -1,0 +1,340 @@
+
+.page {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f4f9fe;
+  color: #0e1e33;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+}
+
+.shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ===== Menu atas ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+.nav-mark {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #5b7192;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.nav-links a:hover {
+  color: #2f6fe4;
+}
+
+/* ===== Bagian utama ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  padding: 56px 0 96px;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  color: #2f6fe4;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2f6fe4;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6.4vw, 76px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 0 0 24px;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #5b7192;
+  max-width: 46ch;
+  margin: 0 0 36px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.btn-solid {
+  background: #2f6fe4;
+  color: #ffffff;
+}
+
+.btn-solid:hover {
+  background: #245bc4;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #0e1e33;
+  border-color: #d7e6f7;
+}
+
+.btn-ghost:hover {
+  background: #e4effc;
+}
+
+.btn:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid #2f6fe4;
+  outline-offset: 3px;
+}
+
+/* ===== Lingkaran inisial ===== */
+.orb-frame {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orb-photo {
+  position: relative;
+  width: 84%;
+  height: 84%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 20px rgba(47, 111, 228, 0.35);
+}
+
+.orb {
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    #ffffff 0%,
+    #e4effc 38%,
+    #9cc4f4 100%
+  );
+}
+
+.orb-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid #d7e6f7;
+}
+
+.orb-initial {
+  position: relative;
+  font-size: clamp(48px, 8vw, 84px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(47, 111, 228, 0.35);
+}
+
+/* ===== Data diri ===== */
+.section {
+  padding: 76px 0;
+  border-top: 1px solid #d7e6f7;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #5b7192;
+  margin: 0 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px 40px;
+}
+
+.item-label {
+  font-size: 13px;
+  color: #5b7192;
+  margin: 0 0 8px;
+}
+
+.item-value {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ===== Kontak ===== */
+.kontak-band {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 52px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.kontak-band h2 {
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0;
+  max-width: 14ch;
+}
+
+.kontak-list {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.kontak-list a {
+  font-size: 17px;
+  font-weight: 500;
+  color: #0e1e33;
+  text-decoration: none;
+  border-bottom: 1px solid #9cc4f4;
+  padding-bottom: 3px;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.kontak-list a:hover {
+  color: #2f6fe4;
+  border-color: #2f6fe4;
+}
+
+/* ===== Footer ===== */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0 44px;
+  font-size: 13px;
+  color: #5b7192;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ===== Animasi saat halaman dibuka ===== */
+.rise {
+  animation: rise 0.7s ease-out backwards;
+}
+
+.d1 {
+  animation-delay: 0.05s;
+}
+
+.d2 {
+  animation-delay: 0.14s;
+}
+
+.d3 {
+  animation-delay: 0.23s;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page * {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* ===== Tampilan di layar kecil ===== */
+@media (max-width: 860px) {
+  .shell {
+    padding: 0 22px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding: 32px 0 72px;
+  }
+
+  .orb-frame {
+    max-width: 260px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .kontak-band {
+    padding: 36px 28px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
